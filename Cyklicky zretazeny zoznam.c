@@ -32,8 +32,9 @@ char ctwl_delete(CTWL* list){
 	}
 	
 	if(list->cur->next == list->cur && list->cur->prev == list->cur){ 
-		list->cur=NULL;
 		free(list->cur);
+		list->cur=NULL;
+		
 		return CTWL_OK;
 	}
 	
